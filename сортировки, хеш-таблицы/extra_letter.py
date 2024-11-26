@@ -1,16 +1,13 @@
 def extra_letter(a, b):
     hash_map_b = {}
     
-  
     for char in b:
         hash_map_b[char] = hash_map_b.get(char, 0) + 1
         
- 
     for char in a:
         if char in hash_map_b:
             hash_map_b[char] -= 1
         
-
     for char, count in hash_map_b.items():
         if count == 1:
             return char

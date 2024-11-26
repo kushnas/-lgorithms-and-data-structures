@@ -43,20 +43,20 @@ import unittest
 class TestIsPalindrome(unittest.TestCase):
 
     def test_palindromes(self):
-        self.assertTrue(is_palindrome("racecar"))         # Ожидается True
-        self.assertTrue(is_palindrome("A man a plan a canal Panama"))  # Ожидается True
-        self.assertTrue(is_palindrome("Able was I ere I saw Elba"))  # Ожидается True
-        self.assertTrue(is_palindrome("No x in Nixon"))  # Ожидается True
+        self.assertTrue(is_palindrome("racecar"))         
+        self.assertTrue(is_palindrome("A man a plan a canal Panama"))  
+        self.assertTrue(is_palindrome("Able was I ere I saw Elba")) 
+        self.assertTrue(is_palindrome("No x in Nixon"))  
 
     def test_non_palindromes(self):
-        self.assertFalse(is_palindrome("hello"))           # Ожидается False
-        self.assertFalse(is_palindrome("Python"))          # Ожидается False
-        self.assertFalse(is_palindrome("abcdef"))          # Ожидается False
+        self.assertFalse(is_palindrome("hello"))           
+        self.assertFalse(is_palindrome("Python"))          
+        self.assertFalse(is_palindrome("abcdef"))          
 
     def test_edge_cases(self):
-        self.assertTrue(is_palindrome(" "))                 # Пустая строка считается палиндромом
-        self.assertTrue(is_palindrome(""))                   # Пустая строка
-        self.assertTrue(is_palindrome("a"))                  # Одна буква считается палиндромом
+        self.assertTrue(is_palindrome(" "))                 
+        self.assertTrue(is_palindrome(""))                   
+        self.assertTrue(is_palindrome("a"))                  
 
 if __name__ == '__main__':
     unittest.main()

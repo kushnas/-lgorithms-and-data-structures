@@ -5,16 +5,14 @@ class ListNode:
         self.next = next
 
 def merge_sorted_lists(list1, list2):
-    # Если один из списков пуст, возвращаем другой
+
     if not list1:
         return list2
     if not list2:
         return list1
-    
-    # Указатели для обхода списков
+
     head = None
     
-    # Устанавливаем начальную ссылку на меньший элемент
     if list1.value < list2.value:
         head = list1
         list1 = list1.next
@@ -22,10 +20,8 @@ def merge_sorted_lists(list1, list2):
         head = list2
         list2 = list2.next
 
-    # Указатель для результата
-    current = head  # Это будет указатель на последний добавленный узел
+    current = head  
 
-    # Объединяем списки путем изменения ссылок
     while list1 and list2:
         if list1.value < list2.value:
             current.next = list1
@@ -33,15 +29,14 @@ def merge_sorted_lists(list1, list2):
         else:
             current.next = list2
             list2 = list2.next
-        current = current.next  # Двигаем указатель результата
+        current = current.next  
 
-    # Присоединяем оставшийся список, если есть
     if list1:
         current.next = list1
     else:
         current.next = list2
 
-    return head  # Возвращаем новый объединенный список
+    return head
 
 def create_linked_list(elements):
     if not elements:
@@ -136,5 +131,4 @@ class TestMergeSortedLists(unittest.TestCase):
         self.assertIsNone(current)
 
 if __name__ == '__main__':
-    # Запуск тестов
     unittest.main()

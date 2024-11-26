@@ -21,7 +21,8 @@ class TestRemoveAdjacentDuplicates(unittest.TestCase):
         self.assertEqual(remove_adjacent_duplicates("abccba"), "")    
 
     def test_no_duplicates(self):
-        self.assertEqual(remove_adjacent_duplicates("abcdefg"), "abcdefg")  
+        self.assertEqual(remove_adjacent_duplicates("abcdefg"), "abcdefg")
+        self.assertEqual(remove_adjacent_duplicates(""), "")  
         
     def test_all_duplicates(self):
         self.assertEqual(remove_adjacent_duplicates("aaaaaa"), "")  
